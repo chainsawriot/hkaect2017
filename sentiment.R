@@ -47,7 +47,7 @@ input <- 'i feel sad'
 
 DocumentTermMatrix(Corpus(VectorSource(c(input))), control = list(dictionary = Terms(clean_dtm))) %>% as.matrix %>% predict(svmm, .)
 
-### make it a function
+### make it into a bot
 
 bot <- function(input) {
     sentiment <- DocumentTermMatrix(Corpus(VectorSource(c(input))), control = list(dictionary = Terms(clean_dtm))) %>% as.matrix %>% predict(svmm, .)
